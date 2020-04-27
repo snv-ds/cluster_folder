@@ -1,6 +1,7 @@
 from textract import process as process_doc
 from docx2txt import process as process_docx
 from os import path, listdir
+from argparse import ArgumentParser
 
 
 def get_file_content(file_path):
@@ -26,7 +27,6 @@ def get_directory_content(dir_path, result):
         get_directory_content(directory, result)
 
 
-
 def iter_dir(file_path):
     files_per_path = {}
     result = {}
@@ -37,3 +37,9 @@ def iter_dir(file_path):
             if content:
                 result[file] = content
     return result
+
+
+def parse_arguments():
+    parser = ArgumentParser(__doc__)
+    parser.add_argument("--path", "-p", help="Folder for text walk through.", default="./")
+    return parser.parse_args()
