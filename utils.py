@@ -42,4 +42,5 @@ def iter_dir(file_path):
 def parse_arguments():
     parser = ArgumentParser(__doc__)
     parser.add_argument("--path", "-p", help="Folder for text walk through.", default="./")
+    parser.add_argument("--verbose", "-v", help="Display clusterisation of files", default=False)
     return parser.parse_args()
