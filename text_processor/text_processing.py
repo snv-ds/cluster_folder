@@ -34,7 +34,10 @@ class TextProcessor:
              _vectorized (scipy.sparse.csr_matrix): sparse matrix of tf-idf presentation of all texts
          """
         self._preprocess()
-        vectorizer = TfidfVectorizer()
+        vectorizer = TfidfVectorizer(ngram_range=(1, 2),
+                                     max_df=0.9,
+                                     min_df=min(2, len(self.corpus) // 6),
+                                     token_pattern='\S+')
         return vectorizer.fit_transform(self.corpus)
 
     def get_phrase_embedding(self, index):
