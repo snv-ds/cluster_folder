@@ -9,7 +9,7 @@ EbookLib==0.17.1
 extract-msg==0.23.1
 IMAPClient==2.1.0
 Jinja2==2.11.2
-joblib==0.14.1
+joblib==1.2.0
 llvmlite==0.32.0
 lxml==4.5.0
 MarkupSafe==1.1.1
