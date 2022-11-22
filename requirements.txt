@@ -18,7 +18,7 @@ numpy==1.18.3
 olefile==0.46
 packaging==20.3
 pdfminer.six==20181108
-Pillow==7.1.2
+Pillow==9.3.0
 pycryptodome==3.9.7
 pymorphy2==0.8
 pymorphy2-dicts==2.4.393442.3710985
